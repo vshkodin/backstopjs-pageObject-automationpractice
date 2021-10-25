@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "node backstop-test.js",
+    "reference": "node backstop-reference.js"
+  },
+  "dependencies": {
+    "backstopjs": "^5.4.3"
+  }
+}
