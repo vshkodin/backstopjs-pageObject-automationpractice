@@ -1,13 +1,24 @@
 const loc = require('./locators')
-
+const LoginPage = require ('./pages/login.page');
+const HomePage = require ('./pages/home.page');
 
 module.exports = async (page, scenario, vp) => {
   console.log('SCENARIO > ' + scenario.label);
   await page.waitForTimeout(6000)
-  //await require('./clickAndHoverHelper')(page, scenario);
   // Example: changing behavior based on config values
 
+    if (scenario.label === 'Login') {
+    await HomePage.gotoSignIn(page)
+    await LoginPage.login(page,'admin@admin.com','password')
+
+    //await page.goto('http://automationpractice.com/index.php?id_category=3&controller=category');
+    //await page.click(loc.locators.womenTab);
+    //await page.waitForTimeout(6000)
+  }
+
+
   if (scenario.label === 'Women_Tab') {
+    //await
     //await page.goto('http://automationpractice.com/index.php?id_category=3&controller=category');
     await page.click(loc.locators.womenTab);
     await page.waitForTimeout(6000)

@@ -1,4 +1,4 @@
-const labels = ['Women_Tab','Dresses_Tab', 'T_shirts_Tab']
+const labels = ['Women_Tab','Dresses_Tab', 'T_shirts_Tab', 'Login']
 const base_url = 'http://automationpractice.com';
 
 module.exports = () => {
