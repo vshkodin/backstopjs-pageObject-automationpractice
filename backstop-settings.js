@@ -45,6 +45,8 @@ module.exports = () => {
     id: 'automationpractice_backstop',
     viewports,
     scenarios,
+    onBeforeScript: "onBefore.js",
+    onReadyScript: "onReady.js",
     paths: {
       bitmaps_reference: 'backstop_data/bitmaps_reference',
       bitmaps_test: "backstop_data/bitmaps_test",
